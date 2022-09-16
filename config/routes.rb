@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "users#index"
-  resources :users, only: [:index, :new, :edit, :create]
+  resources :users, only: [:index, :new, :create]
 
   get "login", to: "user_sessions#new", as: :login
   post "login", to: "user_sessions#create"
