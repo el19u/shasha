@@ -1,8 +1,10 @@
-<div>
+<div class="flex justify-end">
   <% if current_user.present? %>
-    <%= link_to "Logout", :logout, data: { "turbo-method": :delete }%>
+    <%= link_to "Logout", "logout", data: { "turbo-method": :delete } %>
   <% else %>
-    <%= link_to("Register", new_user_path) %>
-    <%= link_to "Login", :login %>
+    <div class="flex gap-5">
+      <%= link_to("Register", new_user_path, class: "block") %>
+      <%= link_to("Login","login", class: "block") %>
+    </div>
   <% end %>
 </div>
