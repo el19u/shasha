@@ -1,17 +1,8 @@
 <%= simple_form_for(user) do |form| %>
-  <div class="field">
+  <div class="gap-4">
     <%= form.input(:email, label: "Email") %>
-  </div>
-
-  <div class="field">
     <%= form.input(:password, label: "Password") %>
-  </div>
-
-  <div class="field">
     <%= form.input(:password_confirmation, label: "Password Confirmation") %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit :submit %>
+    <%= form.submit(:submit) %>
   </div>
 <% end %>

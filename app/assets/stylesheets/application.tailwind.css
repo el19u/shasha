@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* handle form errors color */
+/* handle form errors */
 .error {
   @apply ml-3 text-red-500;
 }
 
+/* handle form errorsr */
+.notice {
+  @apply text-center text-emerald-500;
+}
