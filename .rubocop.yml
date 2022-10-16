@@ -1,0 +1,83 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+inherit_gem:
+  rubocop-github:
+    - config/default.yml
+    - config/rails.yml
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - 'vendor/bundle/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'script/*'
+    - 'lib/**/*'
+    - 'config/**/*'
+    - 'spec/**/*'
+    - 'lib/**/*'
+    - 'db/**/*'
+    - 'bin/*'
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Security/Eval:
+  Enabled: false
+
+Security/Eval:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/EvalWithLocation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+GitHub/RailsControllerRenderPathsExist:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Enabled: false
+
+Rails/Output:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
+GitHub/RailsControllerRenderLiteral:
+  Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+GitHub/RailsViewRenderShorthand:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
