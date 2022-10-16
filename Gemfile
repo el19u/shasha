@@ -1,30 +1,33 @@
+# frozen_string_literal: true
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
-gem "rails", "~> 7.0.3", ">= 7.0.3.1"
-gem "sprockets-rails"
+gem "bootsnap", require: false
+gem "importmap-rails"
+gem "jbuilder"
 gem "pg"
 gem "puma", "~> 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
+gem "rails", "~> 7.0.3", ">= 7.0.3.1"
+gem "simple_form"
+gem "sorcery"
+gem "sprockets-rails"
 gem "stimulus-rails"
 gem "tailwindcss-rails"
-gem "jbuilder"
+gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-gem "bootsnap", require: false
-gem 'sorcery'
-gem "simple_form"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'faker'
   gem "dotenv-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "rspec-rails"
 end
 
 group :development do
+  gem "rubocop-github"
+  gem "rubocop-rails"
   gem "web-console"
 end
 

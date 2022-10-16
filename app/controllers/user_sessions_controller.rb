@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 class UserSessionsController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
-  
+
   def create
     @user = login(params[:email], params[:password])
 
@@ -8,7 +9,7 @@ class UserSessionsController < ApplicationController
       redirect_back_or_to root_path, notice: "Logged in successfully"
     else
       flash.now[:alert] = "Login failed"
-      render action: "new"
+      render "new"
     end
   end
 
