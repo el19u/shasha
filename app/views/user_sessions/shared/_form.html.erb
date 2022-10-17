@@ -1,12 +1,7 @@
-<%= form_with url: login_path, method: :post do |form| %>
+<%= simple_form_for(:user, url: login_path, method: :post) do |form| %>
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-    <%= form.submit "Login" %>
+    <%= form.input(:email, label: "Email") %>
+    <%= form.input(:password, label: "Password") %>
+    <%= form.submit(:submit) %>
   </div>
 <% end %>
